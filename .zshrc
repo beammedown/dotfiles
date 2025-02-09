@@ -102,6 +102,10 @@ alias la='ls -A'
 alias l='ls -CF'
 alias c='clear'
 alias vim='nvim'
+<<<<<<< HEAD
+=======
+alias gis='git status'
+>>>>>>> 99b8c7d (initial commit)
 
 # Cargo
 . "$HOME/.cargo/env"
