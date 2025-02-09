@@ -1,0 +1,21 @@
+[init]
+	defaultBranch = main
+[user]
+	email = gaston@liepach.eu
+	name = beammedown
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILjsp8/h67bdrYc5QB1ZfJwViWRn1yEMU+cZUqvh9dQM
+	mail = gaston@liepach.eu
+[commit]
+	pgpsign = true
+	gpgsign = true
+[core]
+	sshCommand = ssh.exe
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = "/mnt/c/Users/gasto/AppData/Local/1Password/app/8/op-ssh-sign-wsl"
+[pull]
+	rebase = true
+[alias]
+	commits = commit -S -m
