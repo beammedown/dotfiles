@@ -10,6 +10,7 @@
 	gpgsign = true
 [core]
 	sshCommand = ssh.exe
+	pager = delta
 [gpg]
 	format = ssh
 
@@ -19,3 +20,10 @@
 	rebase = true
 [alias]
 	commits = commit -S -m
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+[merge]
+	conflictstyle = zdiff3
