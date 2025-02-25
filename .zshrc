@@ -16,6 +16,9 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
+# ASDF Completion
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -111,12 +114,6 @@ alias el='eza -1 -a --long --icons --no-user --no-time --git --git-repos'
 export PATH=$PATH:/home/bombarder/.local/bin
 export PATH=$PATH:/usr/local/go/bin
 
-
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -189,6 +186,9 @@ _fzf_comprun() {
   esac
 }
 
+# ASDF Config
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # zoxide for different navigation
 # TODO: check if useful
 eval "$(zoxide init zsh)"
@@ -198,5 +198,4 @@ eval "$(zoxide init zsh)"
 #eval "$(oh-my-posh init zsh --config '/mnt/c/Program Files (x86)/oh-my-posh/themes/jandedobbeleer.omp.json')"
 eval "$(oh-my-posh init zsh --config '~/dev/dev-setup/custom.omp.json')"
 eval "$(oh-my-posh init zsh)"
-#eval "$(starship init zsh)"
 
