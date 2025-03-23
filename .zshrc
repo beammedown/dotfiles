@@ -123,7 +123,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # NVIM
 export PATH="$PATH:/opt/nvim-linux64/bin"
-
+## Set as default Editor
+export EDITOR="/opt/nvim-linux64/bin/nvim"
 # DONOT DELETE necessary for 1password key usage
 alias ssh="ssh.exe"
 alias ssh-add="ssh-add.exe"
